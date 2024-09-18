@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>{
+    @vite('resources/css/app.css')
+    <!-- <style>{
         font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -38,18 +39,28 @@
             width: 200px; /* Set fixed width */
             margin: 5px auto; /* Center the div */
         }
-    </style>
+    </style> -->
 </head>
 <body> 
 </head>
-<body>
+<body class="h-screen bg-gradient-to-b from-blue-500 to-slate-0">
 
-    <div class="container">
-        <div class="profile-pic"></div>
-        <div class="info">
-            <div><h1>{{$nama}}</h1></div>
-            <div>{{$kelas}}</div>
-            <div>{{$npm}}</div>
+    <div class="content-center p-5 rounded-xl shadow-sm">
+        <div class="w-28 h-28 bg-slate-100 rounded-full m-auto flex items-center justify-center">
+            <img src="../Assets/img/anime.png" alt="" class="h-13 w-13 rounded-full">
+        </div>
+        <div class="mt-5">
+            <div class="flex flex-col">
+                <p class="bg-gray-300 p-2 my-1 rounded w-48 mx-auto">
+                    {{$nama}}
+                </p>
+                <p class="bg-gray-300 p-2 my-1 rounded w-48 mx-auto">
+                    {{$kelas}}
+                </p>
+                <p class="bg-gray-300 p-2 my-1 rounded w-48 mx-auto">
+                    {{$npm}}
+                </p>
+            </div>
         </div>
     </div>
 
